@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <title>Codenames</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/styles/styles-a0bf158bed.css"/>
+</head>
+<body>
+    <div class="settings">
+        <button class="btn playGameBtn" onclick="playGame()">Start Game</button>
+    </div>
+    <div class="chiefOverlay" style="display: none;">
+        <div class="chiefOverlayContent">
+            <strong>SECRET SERVICE CHIEF</strong>
+            <hr />
+            <span>login via URL:</span>
+            <span class="chiefURL"></span>
+            <span>login via QR:</span>
+            <img class="qrCodeImg" alt="">
+        </div>
+    </div>
+    <div class="wrapper">
+        <aside class="aside">
+            <div class="teamPlayingColor redTeamColor" style="display: none;"></div>
+            <div class="redTeamCount" style="display: none;"></div>
+            <div class="teamPlayingColor blueTeamColor" style="display: none;"></div>
+            <div class="blueTeamCount" style="display: none;"></div>
+
+            <button class="btn endTurnBtn" onclick="endTurn()" style="display: none;">End turn</button>
+
+            <button class="btn startNewGameAsideBtn" onclick="playGame()" style="display: none;">Start Game</button>
+            <button class="btn btn--small chiefOverlayBtn" onclick="javascript:document.querySelector('.chiefOverlay').style.display='flex'" style="display: none;">chief login</button>
+        </aside>
+
+        <main class="matrix"></main>
+    </div>
+
+    <script src="assets/scripts/app-b83eeff734.js"></script>
+</body>
+</html>
