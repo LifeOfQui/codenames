@@ -109,10 +109,11 @@ function setup() {
 
     var encodedString = btoa(sid);
     var path = window.location.protocol + '//' + window.location.host + window.location.pathname.substring(0, window.location.pathname.lastIndexOf("/"));
+    var fullPath = path + '/chief.html?sid=' + encodedString;
 
-    var qrCodeImg = "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(" + path + "/chief.html?sid=" + encodedString +")";
+    var qrCodeImg = 'https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=' + encodeURIComponent(fullPath);
     document.querySelector('.qrCodeImg').src = qrCodeImg;
-    document.querySelector('.chiefURL').innerHTML = '<a href="'+path+'/chief.html?sid='+encodedString+'" target=_blank>Link</a>';
+    document.querySelector('.chiefURL').innerHTML = '<a href="' +fullPath + '" target=_blank>Link</a>';
 
     //preload images
     preload(
