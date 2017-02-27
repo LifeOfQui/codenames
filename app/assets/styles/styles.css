@@ -121,6 +121,7 @@ aside > * {
     justify-content: center;
     align-items: center;
     font-size: var(--responsive);
+    cursor: pointer;
 }
 
 .chiefOverlayContent {

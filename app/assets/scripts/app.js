@@ -123,7 +123,9 @@ function setup() {
         "./assets/images/agent-blue-1.png",
         "./assets/images/observer-0.png",
         "./assets/images/observer-1.png",
-        "./assets/images/assassin.png"
+        "./assets/images/assassin.png",
+        "./assets/images/red-team-disabled.jepg",
+        "./assets/images/blue-team.jpeg"
     )
 
 }
@@ -265,7 +267,7 @@ function setDown(playingTeamNr) {
 }
 
 document.querySelector('.chiefOverlay').addEventListener('click', function() {
-    if (this.offsetParent === null) {
+    if (this.style.display !== "flex") {
         this.style.display = "flex";
     } else {
         this.style.display = "none";

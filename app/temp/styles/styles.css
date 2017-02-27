@@ -132,6 +132,7 @@ aside > * {
         -ms-flex-align: center;
             align-items: center;
     font-size: var(--responsive);
+    cursor: pointer;
 }
 
 .chiefOverlayContent {

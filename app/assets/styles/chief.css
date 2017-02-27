@@ -1,6 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    cursor: pointer;
 }
 body {
     text-align: center;
@@ -112,6 +113,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 999;
+    cursor: pointer;
 }
 
 .overlay-text {
