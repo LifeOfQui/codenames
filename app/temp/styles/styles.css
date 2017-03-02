@@ -29,6 +29,7 @@ body {
     left: 0;
     height: 100vh;
     width: 100vw;
+    background-color: #ffffff;
 }
 
 .endTurnBtn, .chiefOverlayBtn {
@@ -38,7 +39,7 @@ body {
 .btn {
     background-color: lightgrey;
     border: none;
-    padding: 15px 32px;
+    padding: 15px;
     font-size: var(--responsive);
     box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.9);
     -webkit-transition: all 0.3s;
@@ -57,6 +58,19 @@ body {
     width: auto;
     font-size: 15px;
     padding: 12px;
+}
+
+.btn__instructions {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+
+.btn__instructions:hover {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
 }
 
 .chiefOverlayBtn {
@@ -78,7 +92,13 @@ aside {
     width: 15vw;
     float: left;
     height: calc(100vh - 40px);
-    padding: 20px 0 20px 20px;
+    padding: 20px 20px 20px 15px;
+    box-shadow: inset -10px 0px 7px -3px rgba(187,187,187,0.5);
+    background-color: #f1f1f1;
+}
+
+aside > * {
+    padding: 20px 0;
 }
 
 aside .teamPlayingColor {
@@ -90,6 +110,7 @@ aside .teamPlayingColor {
 
 aside .redTeamColor {
     background-image: url('../images/red-team.jpeg');
+    box-shadow: 3px 3px 6px rgba(0,0,0, 0.5);
 }
 
 aside .redTeamColor.disabled {
@@ -98,6 +119,7 @@ aside .redTeamColor.disabled {
 
 aside .blueTeamColor {
     background-image: url('../images/blue-team.jpeg');
+    box-shadow: 3px 3px 6px rgba(0,0,0, 0.5);
 }
 
 aside .blueTeamColor.disabled {
@@ -109,15 +131,11 @@ aside .blueTeamColor.disabled {
     margin-left: 20vw;
 }
 
-aside > * {
-    padding: 20px 0;
-}
-
 .chiefOverlay {
     background-color: lightgrey;
     position: fixed;
     top: 0;
-    left: 0px;
+    left: 0;
     right: 0;
     bottom: 0;
     z-index:2;

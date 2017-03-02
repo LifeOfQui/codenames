@@ -3,6 +3,7 @@ html, body {
     padding: 0;
     cursor: pointer;
 }
+
 body {
     text-align: center;
 }
@@ -19,6 +20,7 @@ body {
         text-align: unset;
     }
 }
+
 .matrix {
     display: inline-block;
     background: black;
@@ -37,10 +39,12 @@ body {
     margin: 1vmin;
     border-radius: 3.5vmin;
     box-shadow: inset 1px 1px 9px rgba(0,0,0,.8);
+
+    &:nth-child(5n+1) {
+        clear: left;
+    }
 }
-.codeWord:nth-child(5n+1) {
-    clear: left;
-}
+
 .black:after {
     content: "\00d7";
     display: block;
@@ -55,39 +59,42 @@ body {
     width: 6.5vmin;
     color: #222;
 }
+
 .red {
     background-image: radial-gradient(center, ellipse cover,  #FF7B64 0%, #F92C22 100%);
-}
-.red:after {
-    content: '';
-    width: 6.5vmin;
-    height: 6.5vmin;
-    left: 51%;
-    top: 51%;
-    background-image: radial-gradient(ellipse at 50% 52%, #F54432 1vmin, #F92C22 2.7vmin, rgba(255,255,255, 0.4) 3.5vmin, transparent 4vmin);
-    display: block;
-    transform: translateY(-50%) translateX(-50%);
-    position: relative;
-    border-radius: 50%;
-    box-shadow: 0px 0px 18px rgba(255,255,255, 0.7);
+
+    &:after {
+        content: '';
+        width: 6.5vmin;
+        height: 6.5vmin;
+        left: 51%;
+        top: 51%;
+        background-image: radial-gradient(ellipse at 50% 52%, #F54432 1vmin, #F92C22 2.7vmin, rgba(255,255,255, 0.4) 3.5vmin, transparent 4vmin);
+        display: block;
+        transform: translateY(-50%) translateX(-50%);
+        position: relative;
+        border-radius: 50%;
+        box-shadow: 0px 0px 18px rgba(255,255,255, 0.7);
+    }
 }
 
 .blue {
     background-image: radial-gradient(center, ellipse cover,  #4EC4E7 0%, #1C6179 100%);
-}
-.blue:after {
-    content: '';
-    width: 5.5vmin;
-    height: 5.5vmin;
-    left: 51%;
-    top: 51%;
-    transform: translateY(-50%) translateX(-50%);
-    box-shadow: 1px 1px 10px rgba(255,255,255, 0.8);
-    background-color: radial-gradient(ellipse farthest-corner at center center , #0B7AA6 0%, #1c6179 100%);
-    display: block;
-    border-radius: 2px;
-    border: 1px solid rgba(255,255,255, 0.3);
-    position: relative;
+
+    &:after {
+        content: '';
+        width: 5.5vmin;
+        height: 5.5vmin;
+        left: 51%;
+        top: 51%;
+        transform: translateY(-50%) translateX(-50%);
+        box-shadow: 1px 1px 10px rgba(255,255,255, 0.8);
+        background-color: radial-gradient(ellipse farthest-corner at center center , #0B7AA6 0%, #1c6179 100%);
+        display: block;
+        border-radius: 2px;
+        border: 1px solid rgba(255,255,255, 0.3);
+        position: relative;
+    }
 }
 
 .yellow {
@@ -114,9 +121,9 @@ body {
     align-items: center;
     z-index: 999;
     cursor: pointer;
-}
 
-.overlay-text {
-    font-family: Roboto;
-    font-weight: 300;
+    &-text {
+        font-family: Roboto;
+        font-weight: 300;
+    }
 }

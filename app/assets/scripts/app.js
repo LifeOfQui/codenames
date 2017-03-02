@@ -142,6 +142,7 @@ function playGame() {
 
     document.querySelector('.settings').style.display = 'none';
     document.querySelector('.startNewGameAsideBtn').style.display = 'none';
+    document.querySelector('.aside').style.display = 'block';
     document.querySelector('.redTeamColor').style.display = 'block';
     document.querySelector('.redTeamCount').style.display = 'block';
     document.querySelector('.redTeamCount').innerHTML = '0 Agenten kontaktiert!';
