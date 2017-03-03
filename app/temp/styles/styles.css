@@ -79,6 +79,12 @@ body {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+    background-image: url('../images/chief-login.png');
+    background-size: 45px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
 }
 
 .chiefOverlayBtn:hover {

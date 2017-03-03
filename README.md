@@ -22,3 +22,6 @@ run gulp task
 - Spielanleitung einbauen (muss von allen Views erreichbar sein)
 - Schönere Gewinn-Message
 - Spielernamen eingeben und speichern können
+- (bei grossen Monitoren)links (rote Leiste) - Spielfeld - blaues Team Leiste rechts
+    - Button mit QR (oder mit stilistischer Codekarte) und Button mit Info
+    - wenn jeweiliges Team dran ist, dann Leiste mit Hintergrundfarbe versehen, die andere grau
