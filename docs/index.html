@@ -6,12 +6,12 @@
     <title>Codenames</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/styles/styles-f43732a8bf.css"/>
+    <link rel="stylesheet" href="assets/styles/styles-3f32ca527b.css"/>
 </head>
 <body>
     <div class="settings">
         <button class="btn playGameBtn" onclick="playGame()">Neues Spiel starten</button>
-        <!--<button class="btn btn&#45;&#45;small btn__instructions" onclick="showInstructions()">Zeige Spielanleitung</button>-->
+        <button class="btn btn--small btn__instructions" onclick="openInstructions()">i</button>
     </div>
     <div class="chiefOverlay" style="display: none;">
         <div class="chiefOverlayContent">
@@ -26,19 +26,20 @@
     <div class="wrapper">
         <aside class="aside" style="display: none;">
             <div class="teamPlayingColor redTeamColor" style="display: none;"></div>
-            <div class="redTeamCount" style="display: none;"></div>
+            <div class="redTeamCount teamAgentCount" style="display: none;"></div>
             <div class="teamPlayingColor blueTeamColor" style="display: none;"></div>
-            <div class="blueTeamCount" style="display: none;"></div>
+            <div class="blueTeamCount teamAgentCount" style="display: none;"></div>
 
             <button class="btn endTurnBtn" onclick="endTurn()" style="display: none;">Zug beenden</button>
 
             <button class="btn startNewGameAsideBtn" onclick="playGame()" style="display: none;">Neues Spiel starten</button>
             <button class="btn btn--small chiefOverlayBtn" onclick="javascript:document.querySelector('.chiefOverlay').style.display='flex'" style="display: none;"></button>
+            <button class="btn btn--small btn__instructions game__instructions" onclick="openInstructions()" style="display: none;">i</button>
         </aside>
 
         <main class="matrix"></main>
     </div>
 
-    <script src="assets/scripts/app-ad8098bdb9.js"></script>
+    <script src="assets/scripts/app-38dd0e09b8.js"></script>
 </body>
 </html>

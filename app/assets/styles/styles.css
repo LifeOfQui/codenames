@@ -58,12 +58,7 @@ body {
     &__instructions {
         position: absolute;
         bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-
-        &:hover {
-            transform: translateX(-50%);
-        }
+        right: 1vw;
     }
 }
 
@@ -87,11 +82,11 @@ body {
 aside {
     text-align: center;
     position: relative;
-    width: 15vw;
+    width: calc(19vw - 3vw);
     float: left;
-    height: calc(100vh - 40px);
-    padding: 20px 20px 20px 15px;
-    box-shadow: inset -10px 0px 7px -3px rgba(#bbbbbb ,0.5);
+    height: calc(100vh - 4vh);
+    padding: 2vh 2vw 2vh 1vw;
+    box-shadow: inset -10px 0 7px -3px rgba(#bbbbbb ,0.5);
     background-color: #f1f1f1;
 
     & > * {
@@ -121,6 +116,10 @@ aside {
         &.disabled {
             background-image: url('../images/blue-team-disabled.jpeg');
         }
+    }
+
+    .teamAgentCount {
+        font-size: var(--responsive);
     }
 }
 
@@ -188,5 +187,21 @@ aside {
 
     &:not(.invisible) {
         color: transparent;
+    }
+}
+
+@media (max-width: 701px) {
+    .codeWord {
+        width: 13vw;
+    }
+
+    .btn {
+        padding: 5px;
+    }
+
+    aside {
+        .chiefOverlayBtn, .btn__instructions {
+            bottom: auto;
+        }
     }
 }

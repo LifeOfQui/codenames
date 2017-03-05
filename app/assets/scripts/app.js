@@ -151,6 +151,7 @@ function playGame() {
     document.querySelector('.blueTeamCount').style.display = 'block';
     document.querySelector('.endTurnBtn').style.display = 'inline-block';
     document.querySelector('.chiefOverlayBtn').style.display = 'inline-block';
+    document.querySelector('.game__instructions').style.display = 'inline-block';
 
     var codeWord = document.querySelectorAll('.codeWord');
 
@@ -251,11 +252,11 @@ function checkWinning() {
 
 function setDown(playingTeamNr) {
     if (playingTeamNr === 0) {
-        alert('RED WINS');
+        alert('Rotes Team gewinnt!');
         document.querySelector('.blueTeamColor').classList.add('disabled');
         document.querySelector('.redTeamColor').classList.remove('disabled');
     } else {
-        alert('BLUE WINS');
+        alert('Blaues Team gewinnt!');
         document.querySelector('.redTeamColor').classList.add('disabled');
         document.querySelector('.blueTeamColor').classList.remove('disabled');
     }
@@ -274,3 +275,9 @@ document.querySelector('.chiefOverlay').addEventListener('click', function() {
         this.style.display = "none";
     }
 });
+
+function openInstructions() {
+    var url = 'https://www.google.de/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjNn5yVzr_SAhUJVxQKHWXUAi4QFggfMAA&url=http%3A%2F%2Fwww.brettspiele-report.de%2Fimages%2Fc%2Fcodenames%2FCodenames-Spielanleitung.pdf&usg=AFQjCNGVwQ4Dy8LEVwzBiWQTFeyUT1EVAg&sig2=6EWKMM33gGqe2W5R-UsEjQ';
+    var win = window.open(url, '_blank');
+    win.focus();
+}
